@@ -12,6 +12,6 @@ public class DemoController {
     @GetMapping("/hello")
     public String sayHello(Model model) {
         model.addAttribute("date", new Date());
-        return "helloworld";
+        return "helloworld-demo";
     }
 }

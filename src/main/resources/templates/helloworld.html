@@ -2,9 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thymeleaf demo</title>
+    <title>Thymeleaf Demo</title>
 </head>
 <body>
-<p th:text="'Time on the server: ' + ${date}"></p>
+<h1>Hello World of Spring!</h1>
+<br>
+<p>Student name: <span th:text="${param.studentName}">
+</span></p>
+<br>
+<p>The message: <span th:text="${message}"></span></p>
 </body>
 </html>
