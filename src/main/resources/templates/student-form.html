@@ -15,6 +15,11 @@
     <select th:field="*{country}">
         <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"></option>
     </select>
+    <br><br>
+    Programming Language:
+    <input type="radio" th:field="*{programmingLanguage}" th:each="tempLanguage : ${languages}"
+           th:value="${tempLanguage}" th:text="${tempLanguage}"/>
+    <br><br>
     <input type="submit" value="Submit">
 </form>
 </body>
