@@ -3,13 +3,15 @@ package by.hryntsaliou.thymeleafdemo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping("/showForm")
+    @GetMapping("/showForm")
     public String showForm() {
         return "helloworld-form";
     }
@@ -28,10 +30,8 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormVersionThree")
-    public String processFormVersionThree(
-            @RequestParam("studentName") String name,
-            Model model) {
+    @PostMapping("/processFormVersionThree")
+    public String processFormVersionThree(@RequestParam("studentName") String name, Model model) {
 
         String result = "Hey duuuuuuuuuude! " + name.toUpperCase();
         model.addAttribute("message", result);
