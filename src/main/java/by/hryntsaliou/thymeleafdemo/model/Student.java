@@ -1,5 +1,7 @@
 package by.hryntsaliou.thymeleafdemo.model;
 
+import java.util.List;
+
 public class Student {
 
     private String firstName;
@@ -9,6 +11,8 @@ public class Student {
     private String country;
 
     private String programmingLanguage;
+
+    private List<String> operatingSystems;
 
     public Student() {
 
@@ -44,5 +48,13 @@ public class Student {
 
     public void setProgrammingLanguage(String programmingLanguage) {
         this.programmingLanguage = programmingLanguage;
+    }
+
+    public List<String> getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(List<String> operatingSystems) {
+        this.operatingSystems = operatingSystems;
     }
 }

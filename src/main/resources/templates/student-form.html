@@ -20,6 +20,10 @@
     <input type="radio" th:field="*{programmingLanguage}" th:each="tempLanguage : ${languages}"
            th:value="${tempLanguage}" th:text="${tempLanguage}"/>
     <br><br>
+    Operating Systems:
+    <input type="checkbox" th:field="*{operatingSystems}" th:each="tempSystem : ${systems}" th:value="${tempSystem}"
+           th:text="${tempSystem}"/>
+    <br><br>
     <input type="submit" value="Submit">
 </form>
 </body>
